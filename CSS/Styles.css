@@ -366,14 +366,36 @@ button{
     color: var(--tech);
 }
 
-#elipse-login{
-    position: absolute;
-    
+.perfil-circular {
+    width: 60px; /* Tamaño del círculo */   
+    height: 60px;
+    border-radius: 50%; /* Hace que el borde sea circular */
+    background-color: #d1d1d1; /* Color de fondo gris */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del círculo */
+  }
+
+  .profile1 {
+    display: flex;
 }
 
-#avatar-login{
-    position: absolute;
+.profile-name {
+
+
 }
+
+.profile-image {
+    align-self: center;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.profile-menu-button {
+    align-self: center;
+}
+
 
 .user-menu{
     overflow: hidden;
