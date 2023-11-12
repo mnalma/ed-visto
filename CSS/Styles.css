@@ -1,0 +1,400 @@
+
+:root{
+    --violet: #6100FF;
+    --tech: #0B0033;
+    --orange: #FF7000;
+    --caribe70: hsla(183, 75%, 44%, 0.7);
+    --white80: hsla(0, 0%, 100%, 0.8);
+    --caribe: hsla(183, 75%, 44%, 1);
+    --caribe30:  hsla(183, 75%, 44%, 0.3);
+    width: 100%;
+    font-size: 16px;
+    }
+  
+body{
+    width: 100%;
+}
+
+.botonesNavegacion{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.botonNavegacion{
+    
+    width: 100%;
+    block-size: 44px;
+    border: none;
+    border-radius: 28px;
+    background:none;
+    cursor: pointer;
+    font-family: 'Urbanist', sans-serif;
+    color: hsla(253, 100%, 10%, 0.8);
+    font-size: 20px;
+    font-weight: 500;   
+}
+
+h2 {
+    font-size: 24px;
+    font-weight:500;
+    color: var(--tech);
+    
+}   
+nav {
+    background: var(--caribe30);
+    block-size: 143.18px;
+    display: flex;
+    justify-content: space-between; 
+    overflow: hidden;
+    align-items: center;
+    padding: 0 72.9px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#botonFeed{
+    max-width: 144px;
+}
+#botonBusquedaAnalisis{
+    max-width: 281px;
+}
+#botonCrearColaborar{
+    max-width: 262px;
+}
+/* .profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 222px;
+    width: 100%;
+} */
+body {
+    font-family: 'Urbanist', sans-serif;
+    text-align: center;   
+    margin:0;      
+ }
+.activo {
+    color:hsla(253, 100%, 10%, 1);
+    background: hsla(0, 0%, 100%, 0.8);
+    box-shadow: 4px 4px 3px 0px hsla(263, 100%, 21%, 0.29);
+    font-weight: 800;
+}
+
+.titulo-perfil{
+    color: var(--white80);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1086px; */
+}
+
+
+.ambos-bloques{
+    width: 100%;
+    display: flex;
+}
+.informacion-personal{
+    width: 231px;
+    height: 39px;
+    display: inline;
+    text-align: center;
+    padding: 20px 100px 20px 100px;
+    margin: 5px 74px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: auto;
+    flex-basis:auto;
+    margin-left:12px;
+    border-radius: 28px;
+    background: var(--white80);
+    box-shadow: 4px 4px 3px 0px rgba(40, 0, 105, 0.29);
+    
+}
+
+
+.foto-perfil{
+    display: inline;
+    text-align: center;
+    padding: 20px 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    width: 150px;
+    height: 150px;
+}
+
+
+.bloque-info-personal{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 27px;
+    margin-left:56px;
+    width: 70%;
+}
+.formulario{
+    width: 70%;
+    margin-left: inherit
+}
+
+.titulo{
+    color: #0B0033;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 375px;
+    margin-top:90px;
+    margin-bottom: 0px;
+}
+
+.titulos-input{
+    color: #0B0033;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display:flex;
+}
+
+input{
+    display: flex; 
+    height: 2.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 10px;
+    border: 2px solid #0B0033;
+    background: #FFF;
+    margin-bottom: 20px;
+    display: flex;
+   
+}
+
+.input-nombre{
+    width: 28.75rem;
+}
+
+.input-apellido{
+    width: 28.75rem;
+}
+
+.input-date{
+    width: 25rem;
+}
+
+
+.selector-paises{
+    width: 25rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 2px solid #0B0033;
+    background: rgba(255, 255, 255, 0.80);
+    display: flex;
+    
+
+}
+
+#seleccion_grado{
+    width:20rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: 2px solid #0B0033;
+    background: rgba(255, 255, 255, 0.80);
+    margin-bottom: 30px;
+    display:flex;
+}
+
+.leyenda{
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#FF0060;
+    margin-left: 0px;
+    display: flex;
+}
+   
+
+
+.bloque-foto-perfil{
+    margin-right: 112px;
+    width: 30%;
+    display:flex;
+}
+
+.contenido-bloque-perfil{
+    width: 456px;
+    height: 530px;
+    display: inline-flex;
+    padding: 50px 40px;
+    margin-top: 90px;
+    margin-right: 157px;
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+    border-radius: 20px;
+    border: 0px solid var(--Tech, #0B0033);
+    background: var(--Azul-Profundo, #0B0033);
+}
+
+.avatar-card{
+    position: absolute;
+    z-index: 1;
+    width: 156.623px;
+    height: 170.044px;
+    flex-shrink: 0;
+}
+
+.datos-estudiante{
+    align-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.botones{
+    height: 20em;
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 142px;
+    /* align-items: flex-end; */
+    
+}
+
+.botones-contenedor{
+    margin-top: 50px;
+    display: flex;
+}
+
+.submit{
+    display: flex;
+    width: 175px;
+    height: 24px;
+    padding: 12px;
+    color:white;
+    background: var(--violet);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-left:auto;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 1px;    
+    margin-bottom: 62px;
+}
+
+.reset{
+    width: 151px;
+    height: 24px;
+    padding: 12px;
+    border:2px solid var(--orange);
+    color:var(--orange);
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-left: 49px;
+    margin-right: 89px;
+    margin-bottom: 62px;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 150% */
+    letter-spacing: 1px;
+}  
+  
+
+button{
+    display: flex;
+}
+
+
+/* .submit-reset{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    flex-wrap: wrap;
+} */
+
+/*estilos de el profile nav*/
+.profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 222px;
+    width: 100%;
+}
+
+.logout-check{
+    display: none;
+}
+.user-sesion{
+    display:flex;
+    align-items: center;
+}
+
+#modulo{
+    display: flex;
+    font-size: 24px;
+    font-weight:500;
+    color: var(--tech);
+}
+
+#elipse-login{
+    position: absolute;
+    
+}
+
+#avatar-login{
+    position: absolute;
+}
+
+.user-menu{
+    overflow: hidden;
+    display: none;
+}
+
+.decoracion-img{
+    display: flex;
+    position: absolute;
+    /* width: 50%; */
+    /* align-items: flex-end; */
+}
+
+.mancha{
+    position: absolute;
+    z-index: -1;
+    text-align: start;
+
+}
+.libros{
+    position: absolute;
+    left: 180px;
+    z-index: 1;
+}

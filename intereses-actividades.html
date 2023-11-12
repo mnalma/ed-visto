@@ -1,3 +1,4 @@
+ 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,181 +7,99 @@
     <link rel="stylesheet" href="./CSS/Styles.css">
     <title>Intereses y actividades</title>
 </head>
+
 <body>
-    <nav>
-        <ul>
-                <li><a href="/index.html">INFORMACION</a></li>
-                <li><a href="/intereses-actividades.js">INTERESES Y ACTIVIDADES</a></li>
-                <li><a href="/portada.js">PORTADA</a></li>
-                <li><a href="/foto-perfil.js">FOTO DE PERFIL</a></li>
-        </ul>
-    </nav>
-
-    <header class="barra_navegacion">(Barra de Navegación)</header>
-
     
-        <form>
-        <select>
-            <option>HOBBIE O PASATIEMPO</option>
-            <option>Hacer deportes</option>
-            <option>Baile</option>
-            <option>Música</option>
-            <option>Cocina</option>
-            <option>Lectura</option>
-            <option>Teatro o Actuación</option>
-            <option>Coleccionista</option>
-            <option>Programación o robótica</option>
-            <option>Canto</option>
-            
-        </form>          
-        </select>
+    <header class="cabecera">
+		<img class="logo-edvisto" src="Imagenes/logo-edvisto.png" alt="">	
+		<h1 class="titulo-perfil">Perfil del estudiante</h1>	
+	</header>
 
-        <form>
-            <select>
-                <option>DEPORTE QUE MAS TE GUSTA</option>
-                <option>Fútbol(Sóccer)</option>
-                <option>Basket(Baloncesto)</option>
-                <option>Natación</option>
-                <option>Atletismo</option>
-                <option>Gimnasia</option>
-                <option>Ténis</option>
-                <option>Beisbol</option>
-                <option>Voleibol</option>
-                <option>Ciclismo</option>
-                <option>Automovilismo</option>
-                
-            </form>          
-            </select>
+    <main class="barra-navegacion">
+    	<nav>
+        	<ul>
+            	<li class="informacion-personal"><a href="/index.html">Informacion personal</a></li>
+            	<li class="intereses-actividades"><a href="/intereses-actividades.html">Intereses y actividades</a></li>
+        	</ul>
+    	</nav>
+	</main>
 
+    <div class="materia-hobbie-profesion">
+        <div class="materia">
+            <p class="titulos-cards">Materia favorita</p>
+            <img src="Imagenes/materia-favorita.png" alt="Materia Favorita" class="imagen-materia">
             <form>
-                <select>
-                    <option>TIPO DE LIBROS FAVORITO</option>
-                    <option>Novelas</option>
-                    <option>Cuento</option>
-                    <option>Poesía</option>
-                    <option>Drama</option>
-                    <option>Biografía</option>
-                    <option>Fantasía</option>
-                    <option>Misterio</option>
-                    <option>Aventura</option>
+                <select class="select-cards" name="texto">
+                    <option>Elegir una...</option>
+                    <option>Matemática</option>
+                    <option>Lenguaje</option>
+                    <option>Ciencias Naturales</option>
+                    <option>Educación Física</option>
+                    <option>Artística</option>
+                    <option>Religión</option>
+                    <option>Tecnología</option>
+                    <option>Computación e Informática</option>
+                    <option>Música</option>
                     <option>Historia</option>
-                    <option>Terror/Horror</option>
-                    <option>Realismo mágico</option>
-                    <option>Detectives</option>
-                    
-                </form>          
+                    <option>Otro</option>   
+                </select>                                 
+            </form> 
+        </div>         
+        
+        <div class="hobbie">
+            <p class="titulos-cards">Hobbie o pasatiempo</p>
+            <img src="Imagenes/hobbie.png" alt="Hobbie" class="imagen-hobbie">
+            <form>
+                <select class="select-cards"name="texto">
+                <option>Elegir uno...</option>
+                <option>Hacer deportes</option>
+                <option>Baile</option>
+                <option>Música</option>
+                <option>Cocina</option>
+                <option>Lectura</option>
+                <option>Teatro o Actuación</option>
+                <option>Coleccionista</option>
+                <option>Programación o robótica</option>
+                <option>Canto</option>
+                <option>Otro</option>
                 </select>
+            </form>
+        </div>
+        <div class="profesion">
+            <p class="titulos-cards">Cuando sea grande quiero ser...</p>
+            <img src="Imagenes/profesion.png" alt="Profesión" class="imagen-profesion">
+            <form>
+                <select class="select-cards"name="texto">
+                    <option>Elegir una...</option>
+                    <option>Médico</option>
+                    <option>Ingeniero</option>
+                    <option>Astronauta</option>
+                    <option>Profesor o Maestro</option>
+                    <option>Periodista</option>
+                    <option>Polícia</option>
+                    <option>Bombero</option>
+                    <option>Chef</option>
+                    <option>Científico</option>
+                    <option>Escritor</option>
+                    <option>Piloto</option>
+                    <option>Artista</option>
+                    <option>Diseñador de videojuegos</option>
+                    <option>Actor o Actriz</option>
+                    <option>Veterinario</option>
+                    <option>Empresario</option>
+                    <option>Influencer</option>
+                    <option>Arquitecto</option>
+                    <option>Psicólogo</option>
+                    <option>Otro</option>
+                </select>
+            </form>          
+                
+        </div>
+    </div>
 
-                <form>
-                    <select>
-                        <option>PELICULA PREFERIDA</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                        <option>13</option>
-                        <option>14</option>
-                        <option>15</option>
-                        <option>16</option>
-                        <option>17</option>
-                        <option>18</option>
-                        <option>19</option>
-                    </form>          
-                    </select>
+    <div class="botones">
+        <button type="submit" class="submit">Guardar</button>
+        <button type="reset" class="reset">Cancelar</button>
+    </footer>
 
-                    <form>
-                        <select>
-                            <option>PERSONAJE FAVORITO</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                            <option>13</option>
-                            <option>14</option>
-                            <option>15</option>
-                            <option>16</option>
-                            <option>17</option>
-                            <option>18</option>
-                            <option>19</option>
-                        </form>          
-                        </select>    
-                        
-                        <form>
-                            <select>
-                                <option>JUEGO QUE MAS TE GUSTA</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                                <option>11</option>
-                                <option>12</option>
-                                <option>13</option>
-                                <option>14</option>
-                                <option>15</option>
-                                <option>16</option>
-                                <option>17</option>
-                                <option>18</option>
-                                <option>19</option>
-                            </form>          
-                            </select>   
-
-                            <form>
-                                <select>
-                                    <option>MATERIA FAVORITA</option>
-                                    <option>Matemática</option>
-                                    <option>Lenguaje</option>
-                                    <option>Ciencias Naturales</option>
-                                    <option>Educación Física</option>
-                                    <option>Artística</option>
-                                    <option>Religión</option>
-                                    <option>Tecnología</option>
-                                    <option>Computación e Informática</option>
-                                    <option>Música</option>
-                                    <option>Historia</option>
-                                    <option>Otro</option>                                    
-                                </form>          
-                                </select>
-
-                                <form>
-                                    <select>
-                                        <option>DE GRANDE QUIERO SER...</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option>8</option>
-                                        <option>9</option>
-                                        <option>10</option>
-                                        <option>11</option>
-                                        <option>12</option>
-                                        <option>13</option>
-                                        <option>14</option>
-                                        <option>15</option>
-                                        <option>16</option>
-                                        <option>17</option>
-                                        <option>18</option>
-                                        <option>19</option>
-                                    </form>          
-                                    </select>
 </body>

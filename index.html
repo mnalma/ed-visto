@@ -3,47 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <title>EdVisto</title>
     <link rel="stylesheet" href="./CSS/Styles.css">
-    <title>Información</title>
+    
 </head>
 
 <body>	
-	
 	<header class="cabecera">
-		<img class="logo-edvisto" src="Imagenes/logo-edvisto.png" alt="">	
-		<!-- <h1 class="titulo-perfil">Perfil del estudiante</h1> -->
 		<nav>
-			<ul class="titulo-perfil">Feed</ul>
-			<ul class="titulo-perfil">Busqueda y Analisis</ul>
-			<ul class="titulo-perfil">Crear y Colaborar</ul>
-		</nav>
-
-		<div class="usuario">
-			<div class="usuario-sesion">
-				<!-- <input type="checkbox" id="logout" class="logout-check"> -->
-				<label class="profile" for="logout" data-cy="profile">
-					<img src="https://d1ngjctyujvjjy.cloudfront.net/images/anon.png" alt="Maite Natalia" width="32" height="32">
-					<svg width="14px" height="9px" class="icons__Svg-sc-1tw18hn-0 dNvSSe" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path width="14px" height="9px" d="M2.42969 0.5L0.929688 2L7 8.07031L13.0703 2L11.5703 0.5L7 5.07031L2.42969 0.5Z" fill="var(--secondary)"></path></svg></label>
+			<img class="logo-edvisto" src="Imagenes/ed-visto-logo.svg" alt="Logo de EdVisto" title="Logo EdVisto"  width="114px" height="52px">	
+		
+			<!-- <section class="botonesNavegacion">
+				<button class="botonNavegacion" id="botonFeed" aria-label="Botón módulo feed">Feed</button>
+				<button class="botonNavegacion" id="botonBusquedaAnalisis" aria-label="Botón módulo búsqueda y análisis">Búsqueda y Análisis</button>
+				<button class="botonNavegacion" id="botonCrearColaborar" aria-label="Botón módulo crear y colaborar">Crear y colaborar</button>
+			</section> -->
+		
+			<section class="profile">
+				<div class="user-sesion">
+					<input type="checkbox" id="logout" class="logout-check"></input>
+					<label class="profile" for="logout" data-cy="profile"></label>
+					<h2 id="modulo">¡Hola, Juan!</h2>
+					<img src="Imagenes/ellipse-login.svg" alt="" width="61px" height="61px" id="elipse-login">
+					<img src="Imagenes/avatar.png"  alt="Icono del perfil" aria-label="Icono del perfil" width="50.051px"
+					height= "57.872px" id="avatar-login">
+					<img src="Imagenes/vector.svg" alt="Icono desplegable perfil" aria-label="Desplegar opciones del perfil" width="24px" height="24px">
+					</label>
 					<nav class="user-menu" aria-label="Menú del usuario">
 						<ul>
 							<li>
 								<a class="menu-miperfil" id="1-perfil" href="">Perfil</a>
+							</li>	
+							<li>	
 								<a class="menu-miperfil" id="2-configuracion" href="">Configuración</a>
-								
-								</li>
-						</ul></nav></div></div>
-
+							</li>
+							<li>
+								<a class="menu-miperfil" id="3-salir" href="">Salir</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+						  
+			</section>  
 	</header>
 
-	<!-- <main class="barra-navegacion">
-    	<nav>
-        	<ul>
-            	<li class="informacion-personal"><a href="/index.html">Informacion personal</a></li>
-            	<li class="intereses-actividades"><a href="/intereses-actividades.html">Intereses y actividades</a></li>
-        	</ul>
-    	</nav>
-	</main> -->
+	<div id="contenidoModulo"></div>
+    <script src="/BarraDeNavegacion.js"></script>
+
 	<div class="ambos-bloques">
 		<div class="bloque-info-personal">
 			<h1 class="titulo">INFORMACIÓN PERSONAL</h1>
@@ -1051,28 +1060,35 @@
 				<option value="1">8vo grado</option>
 				</select>
 				<p class="leyenda">(*)campos obligatorios</p>
+				
 				<div>
-					<div class="botones">
-						<button type="submit" class="submit">Guardar</button>
-						<button type="reset" class="reset">Cancelar</button>
-					</div>
 					
-			
 				</div>
 			</form>
 		</div>
-		
+	
 		<div class="bloque-foto-perfil">
 			<div class="contenedor">
 				<div class="contenido-bloque-perfil">
-					<img src="Imagenes/circulo-foto-perfil.png" alt="Foto de Perfil" class="foto-perfil">
-					<p class="datos-estudiante">NOMBRE Y APELLIDO<br>
+					<img src="Imagenes/elipse.svg" alt="Foto de Perfil" class="circulo-perfil">
+					<img src="Imagenes/avatar-card.png" alt="Avatar de perfil" class="avatar-card">
+					<p class="datos-estudiante">NOMBRE Y APELLIDO<br><br>
 						ESTUDIANTE<br>
 						EDAD<br>
 						PAÍS DE RESIDENCIA<br>
 						GRADO<br></p>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="decoracion-img">
+		<img src="Imagenes/decoracion.png" alt="deco" class="mancha">
+		<img src="Imagenes/decoracion-libros.png" alt="deco libros" class="libros">
+	</div>
+	<div class="botones">
+		<div class="botones-contenedor">
+			<button type="submit" class="submit"><img src="Imagenes/button-guardar.png" alt="Botón de guardar"></button>
+			<button type="reset" class="reset"><img src="Imagenes/button-cancelar.png" alt="Botón de cancelar"></button>
 		</div>
 	</div>
 	
