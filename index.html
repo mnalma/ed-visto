@@ -13,7 +13,7 @@
 
 <body>	
 	<header class="cabecera">
-		<nav>
+		<nav class="header">
 			<img class="logo-edvisto" src="Imagenes/ed-visto-logo.svg" alt="Logo de EdVisto" title="Logo EdVisto"  width="114px" height="52px">	
 		
 			<section class="profile">
@@ -28,32 +28,30 @@
 							height= "57.872px" id="avatar-login">
 
 						</div>
-						<div class="profile-menu-button">
+						<div class="profile-menu-button" id="profile-menu-button">
 							<img src="Imagenes/vector.svg" alt="Icono desplegable perfil" aria-label="Desplegar opciones del perfil" width="24px" height="24px">
 						</div>					
 					</div>
 					<!-- <input type="checkbox" id="logout" class="logout-check"></input> -->
 					<!-- <label class="profile" for="logout" data-cy="profile"></label> -->
-					
-					<nav class="user-menu" aria-label="Menú del usuario">
-						<ul>
-							<li>
-								<a class="menu-miperfil" id="1-perfil" href="">Perfil</a>
-							</li>	
-							<li>	
-								<a class="menu-miperfil" id="2-configuracion" href="">Configuración</a>
-							</li>
-							<li>
-								<a class="menu-miperfil" id="3-salir" href="">Salir</a>
-							</li>
-						</ul>
-					</nav>
-					
-					
-				
 				</div>
 						  
 			</section>  
+		
+		</nav>
+		<nav class="menu-desplegable hidden" aria-label="Menú del usuario" id="user-menu">
+			<ul>
+				<li>
+					<a class="menu-miperfil" id="1-perfil" href="">Perfil</a>
+				</li>	
+				<li>	
+					<a class="menu-miperfil" id="2-configuracion" href="">Configuración</a>
+				</li>
+				<li>
+					<a class="menu-miperfil" id="3-salir" href="">Salir</a>
+				</li>
+			</ul>
+		</nav>
 	</header>
 
 	<div id="contenidoModulo"></div>
@@ -1099,12 +1097,4 @@
 	</div>
 	
 </body>
-
-
-
-
-
-
-
-    
-    
+</html>
