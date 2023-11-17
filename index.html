@@ -23,7 +23,6 @@
 							<p id="modulo">¡Hola, Juan!</p>
 						</div>
 						<div class="profile-image perfil-circular">
-							<!-- <img src="Imagenes/ellipse-login.svg" alt="" width="61px" height="61px" id="elipse-login"> -->
 							<img src="Imagenes/avatar.png"  alt="Icono del perfil" aria-label="Icono del perfil" width="50.051px"
 							height= "57.872px" id="avatar-login">
 
@@ -32,8 +31,7 @@
 							<img src="Imagenes/vector.svg" alt="Icono desplegable perfil" aria-label="Desplegar opciones del perfil" width="24px" height="24px">
 						</div>					
 					</div>
-					<!-- <input type="checkbox" id="logout" class="logout-check"></input> -->
-					<!-- <label class="profile" for="logout" data-cy="profile"></label> -->
+					
 				</div>
 						  
 			</section>  
@@ -54,24 +52,23 @@
 		</nav>
 	</header>
 
-	<div id="contenidoModulo"></div>
-    <script src="/BarraDeNavegacion.js"></script>
+	
 
 	<div class="ambos-bloques">
 		<div class="bloque-info-personal">
 			<h1 class="titulo">INFORMACIÓN PERSONAL</h1>
-			<form class="formulario">
+			<form class="formulario" action="" onsubmit="return validarFormulario()">
 				<label class="titulos-input">Nombre/s(*)</label>
-				<input class="input-nombre"type="text" name="nombre_usuario" placeholder="Ej: Juan Agustín " required>
+				<input class="input-nombre"type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Ej: Juan Agustín "  minlength="3" maxlength="20" required>
 
 				<label class="titulos-input">Apellido/s(*)</label>        
-				<input class="input-apellido"type="text" name="apellido_usuario" placeholder="Ej: Pérez Garcia" required> 
+				<input class="input-apellido"type="text" id="apellido_usuario" name="apellido_usuario" placeholder="Ej: Pérez Garcia" required minlength="3" maxlength="20"> 
 
 				<label class="titulos-input">Fecha de Nacimiento(*)</label>
-				<input class= "input-date"type="date">
+				<input class= "input-date"type="date" id="date_usuario">
 				
 				<label class="titulos-input">E-mail(*)</label>
-				<input type="mail" name="mail" placeholder="Ej: ja.perez@gmail.com">
+				<input type="mail" name="mail" id="mail_usuario"placeholder="Ej: ja.perez@gmail.com">
 
 				<label class="titulos-input">País de residencia</label>
 				<label for="seleccion_pais"></label>
@@ -1096,10 +1093,13 @@
 	</div>
 	<div class="botones">
 		<div class="botones-contenedor">
-			<button type="submit" class="submit"><img src="Imagenes/button-guardar.png" alt="Botón de guardar"></button>
-			<button type="reset" class="reset"><img src="Imagenes/button-cancelar.png" alt="Botón de cancelar"></button>
+			<button type="submit" class="submit" onclick="onSubmitClick()"><img src="Imagenes/button-guardar.png" alt="Botón de guardar"></button>
+			<button type="reset" class="reset" onclick="onResetClick()"><img src="Imagenes/button-cancelar.png" alt="Botón de cancelar"></button>
 		</div>
 	</div>
+
+	<div id="contenidoModulo"></div>
+    <script src="/perfilEstudiante.js"></script>
 	
 </body>
 </html>

@@ -9,29 +9,12 @@
     --caribe30:  hsla(183, 75%, 44%, 0.3);
     width: 100%;
     font-size: 16px;
+    padding: 0px;
+    margin: 0px;
     }
   
-body{
+/* body{
     width: 100%;
-}
-
-/* .botonesNavegacion{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-.botonNavegacion{
-    
-    width: 100%;
-    block-size: 44px;
-    border: none;
-    border-radius: 28px;
-    background:none;
-    cursor: pointer;
-    font-family: 'Urbanist', sans-serif;
-    color: hsla(253, 100%, 10%, 0.8);
-    font-size: 20px;
-    font-weight: 500;   
 } */
 
 h2 {
@@ -52,17 +35,15 @@ nav.header {
 
 .logo-edvisto{
     padding-left: 97px;
-    
 }
 
 .menu-desplegable { 
     position: absolute;
-    top: 143.17px; /* Ajusta la posición vertical según tu diseño */
-    right: 0; /* Ajusta la posición horizontal según tu diseño */
+    top: 143.17px; 
+    right: 0; 
     background-color: var(--caribe30);
-    /* border: 1px solid #ccc; Estilo del menú */
-    padding: 0px; /* Espaciado interno del menú */
-    z-index: 1; /* Asegura que el menú aparezca encima de otros elementos */
+    padding: 0px;
+    z-index: 1;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px
     
@@ -127,13 +108,7 @@ a{
 #botonCrearColaborar{
     max-width: 262px;
 }
-/* .profile{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 222px;
-    width: 100%;
-} */
+
 body {
     font-family: 'Urbanist', sans-serif;
     text-align: center;   
@@ -244,7 +219,6 @@ input{
     background: #FFF;
     margin-bottom: 20px;
     display: flex;
-   
 }
 
 .input-nombre{
@@ -293,8 +267,6 @@ input{
     display: flex;
 }
    
-
-
 .bloque-foto-perfil{
     margin-right: 112px;
     width: 30%;
@@ -339,6 +311,7 @@ input{
     position: absolute;
     justify-content: center;
     align-items: center;
+    margin-inline-start: 100px;
 
 }
 .recuadro-foto{
@@ -462,14 +435,14 @@ button{
 }
 
 .perfil-circular {
-    width: 60px; /* Tamaño del círculo */   
+    width: 60px;  
     height: 60px;
-    border-radius: 50%; /* Hace que el borde sea circular */
-    background-color: #d1d1d1; /* Color de fondo gris */
+    border-radius: 50%; 
+    background-color: #d1d1d1;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del círculo */
+    overflow: hidden; 
   }
 
   .profile1 {
