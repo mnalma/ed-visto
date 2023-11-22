@@ -13,9 +13,10 @@
     margin: 0px;
     }
   
-/* body{
+body{
     width: 100%;
-} */
+    margin:0px;
+}
 
 h2 {
     font-size: 24px;
@@ -99,15 +100,6 @@ a{
     text-decoration: none;
     color: inherit;
 }
-#botonFeed{
-    max-width: 144px;
-}
-#botonBusquedaAnalisis{
-    max-width: 281px;
-}
-#botonCrearColaborar{
-    max-width: 262px;
-}
 
 body {
     font-family: 'Urbanist', sans-serif;
@@ -180,7 +172,7 @@ body {
     width: 70%;
 }
 .formulario{
-    width: 70%;
+    /* width: 70%; */
     margin-left: inherit
 }
 
@@ -340,7 +332,7 @@ input{
     width: 100%;
     display:flex;
     justify-content: flex-end;
-    margin-right: 142px;
+    margin-right: 1400px;
     /* align-items: flex-end; */
     
 }
@@ -488,4 +480,21 @@ button{
     position: absolute;
     left: 180px;
     z-index: 1;
+}
+
+@media screen and (max-width: 820px) {
+    .body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ambos-bloques{
+        flex-direction: column;
+    }
+
+   .botones{
+        flex-direction: column;
+        align-content: flex-start;
+   }
+
 }
