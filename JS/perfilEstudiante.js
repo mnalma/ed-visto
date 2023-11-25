@@ -12,52 +12,52 @@ const showHideMenu = () => {
 
 profileMenuBtn.addEventListener('click', showHideMenu);
 
-//Botones Guardar y Cancelar
-function onSubmitClick() {
 
+
+     //Botones Guardar y Cancelar
+    //  tendria que nombrarla validar?
+function onsubmitButton() {
     Swal.fire({
         title: "Guardar Formulario",
         text: "Guardado Correctamente!",
         icon: "success"
     });
+    console.log("soy el onsubmit");
 }
 
 function onResetClick() {
-
     Swal.fire({
         title: "Borrar Formulario",
         text: "Formulario Borrado Correctamente!",
         icon: "success"
     });
+    
 }
 
-//Validación formulario
-function validarFormulario() {
-    var nombre_usuario = document.getElementById('nombre_usuario').value;
-    var apellido_usuario = document.getElementById('apellido_usuario').value;
-    var date_usuario = document.getElementById('date_usuario').value;
+// onsubmit="return validar()";
 
-    document.getElementById('nombreError').innerHTML = '';
-    document.getElementById('apellidoError').innerHTML = '';
-    document.getElementById('dateError').innerHTML = '';
-
-
-    if (nombre_usuario === '') {
-        document.getElementById('nombreError').innerHTML = 'El campo nombre debe ser llenado correctamente';
-        return false;
+// //Validacion del formulario
+function validar() {
+    const inputNombre = document.getElementById('input-nombre');
+    const inputApellido = document.getElementById('input-apellido');
+    const inputEmail = document.getElementById('mail_usuario')
+    const inputDate = document.getElementById('date-usuario');
+    if(!inputNombre.checkValidity()) {
+      alert('El campo "nombre" debe ser llenado correctamente.');
+    return false;
     }
-
-
-    if (apellido_usuario === '') {
-        document.getElementById('apellidoError').innerHTML = 'Has olvidado poner tu apellido';
-        return false;
+    else if(!inputApellido.checkValidity()) {
+        alert('Has olvidado poner tu apellido.');
+    return false;
     }
-
-
-    if (isNaN(date_usuario)) {
-        document.getElementById('ageError').innerHTML = 'El campo fecha de nacimiento es obligatorio';
-        return false;
+    else if(inputEmail.value=='') {
+      alert('El campo mail no es válido.');
+   
     }
-    alert('Formulario enviado con exito');
-    return true;
-}
+    else if(!inputDate.checkValidity()) {
+        alert('Ingresa una fecha si lo deseas');
+    return false;
+    }
+    onsubmitButton();
+return true;
+} 
