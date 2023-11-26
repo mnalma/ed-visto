@@ -61,3 +61,50 @@ function validar() {
     onsubmitButton();
 return true;
 } 
+//Boton carga foto de perfil
+// const openModalBtn = document.getElementById('openModalBtn');
+
+// function printPantalla() {
+//     console.log("Le diste Click al botón");
+// }
+
+// openModalBtn.addEventListener('click', printPantalla);
+
+//boton de carga de foto
+  const fileInput = document.getElementById('fileInput');
+  const customButton = document.getElementById('custom-button');
+
+  customButton.addEventListener('click', () => {
+    fileInput.click();
+  });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openModalBtn = document.getElementById('openModalBtn');
+    const imageModal = document.getElementById('imageModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const fileInput = document.getElementById('fileInput');
+    const previewImage = document.getElementById('previewImage');
+
+    openModalBtn.addEventListener('click', function () {
+        imageModal.style.display = 'block';
+    });
+
+    closeModalBtn.addEventListener('click', function () {
+        imageModal.style.display = 'none';
+    });
+
+    fileInput.addEventListener('change', function () {
+        const file = fileInput.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.addEventListener('load', function () {
+                previewImage.src = reader.result;
+                previewImage.style.display = 'block';
+            });
+
+            reader.readAsDataURL(file);
+        }
+    });
+});

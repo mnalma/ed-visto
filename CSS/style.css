@@ -307,7 +307,24 @@ input{
     margin-inline-start: 100px;
 
 }
+
+.icono-camara2{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-inline-start: 100px;
+
+}
 .recuadro-foto{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+
+}
+
+.recuadro-foto2{
     position: absolute;
     width: 40px;
     height: 40px;
@@ -328,10 +345,24 @@ input{
 
 }
 
+.camara-foto2{
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 20px;
+    height: 18px;
+    padding: 3px 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+
 .botones{
     height: 20em;
     width: 100%;
     display:flex;
+    margin-left: 50px;
     
     /* margin-right: 1400px; */
     /* align-items: flex-end; */
@@ -485,6 +516,99 @@ button{
     position: absolute;
     left: 180px;
     z-index: 1;
+}
+
+.container {
+    position: relative;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 9rem;
+    bottom: 4rem;
+    left: 4rem;
+    right: 4rem;
+    /* width: 100%; */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 456px;
+    height: 530px;
+    transform: translate(-50%, -50%);
+    /* padding: 20px; */
+    border-radius: 20px;
+    border: 0px solid var(--Tech, #0B0033);
+    background: var(--Azul-Profundo, #0B0033);
+    /* intento para posicionar los elementos  */
+    display: inline-flex;
+    padding: 50px 40px;
+    margin-top: 60px;
+    /* margin-right: 157px; */
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #FFF;
+}
+.requerimientos-foto{
+    color: #FFF;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+#fileInput {
+    margin-top: 10px;
+    background: #D9D9D9;
+    overflow: hidden;
+}
+
+.inputFile{
+    position: relative;
+    display: inline-block
+   
+}
+
+/* .inputFile::before{ */
+#custom-button{
+background-color:  #c8cacf;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'AÑADIR FOTO';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+#previewImage {
+    max-width: 100%;
+    margin-top: 10px;
+    display: none;
 }
 
 @media screen and (max-width: 820px){
