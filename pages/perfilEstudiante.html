@@ -60,7 +60,8 @@
 	<div class="both-blocks">
 		<div class="block-personal-information">
 			<h1 class="tittle">INFORMACIÓN PERSONAL</h1>
-			<form class="form" action="" id="validationForm" name="validationForm" onsubmit="return validar()">
+			<form class="form" action="" id="validationForm" name="validationForm" >
+				<!-- onsubmit="return validar()" -->
 
 				<label class="tittle-input">Nombre/s (*)</label>
 				<input class="input-name" type="text" id="input-name" name="input-nombre"
@@ -78,7 +79,8 @@
 				<input type="mail" name="mail" id="mail_usuario" placeholder="Ej: ja.perez@gmail.com" minlength="1">
 
 				<label class="tittle-input">Fecha de Nacimiento (*)</label>
-				<input class="input-date" type="date" id="date-usuario" min="2010-01-01" max="2017-01-01">
+				<input class="input-date" type="date" id="date-usuario" min="2010-01-01" max="2017-01-01" required>
+				<p class="error-message"id="dateError">Debes seleccionar una fecha.</p>	
 
 
 				<label class="tittle-input">País de residencia</label>
@@ -1078,7 +1080,9 @@
 					<div class="buttons-container">
 						<button type="reset" class="reset" onclick="onResetClick()"><img
 								src="../img/button-cancelar.png" alt="Botón de cancelar"></button>
-						<button class="submit" type="submit" onclick="onsubmitButton()"><img src="../img/button-guardar.png"
+						<button class="submit" type="submit">
+							<!-- onclick="onsubmitButton() -->
+							<img src="../img/button-guardar.png"
 								alt="Botón de guardar"></button>
 					</div>
 				</div>
@@ -1140,11 +1144,12 @@
 	</div>
 
 
-	<script src="/js/perfilEstudiante.js"></script>
+	
 	<script src="/js/sweetAlert/sweetalert2.js"></script>
 	<script src="js/sweetAlertCode.js"></script>
 	<script src="js/alerts/alertSave.js"></script>
 	<script src="js/alerts/alertCancel.js"></script>
+	<script src="/js/perfilEstudiante.js"></script>
 
 </body>
 
