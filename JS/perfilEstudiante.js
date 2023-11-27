@@ -16,6 +16,15 @@ profileMenuBtn.addEventListener('click', showHideMenu);
 
      //Botones Guardar y Cancelar
     //  tendria que nombrarla validar?
+// function onsubmitButton() {
+//     Swal.fire({
+//         title: "Guardar Formulario",
+//         text: "Guardado Correctamente!",
+//         icon: "success"
+//     });
+//     console.log("soy el onsubmit");
+// }
+
 function onsubmitButton() {
     Swal.fire({
         title: "Guardar Formulario",
@@ -37,30 +46,56 @@ function onResetClick() {
 // onsubmit="return validar()";
 
 // //Validacion del formulario
-function validar() {
-    const inputNombre = document.getElementById('input-nombre');
-    const inputApellido = document.getElementById('input-apellido');
-    const inputEmail = document.getElementById('mail_usuario')
-    const inputDate = document.getElementById('date-usuario');
-    if(!inputNombre.checkValidity()) {
-      alert('El campo "nombre" debe ser llenado correctamente.');
-    return false;
-    }
-    else if(!inputApellido.checkValidity()) {
-        alert('Has olvidado poner tu apellido.');
-    return false;
-    }
-    else if(inputEmail.value=='') {
-      alert('El campo mail no es válido.');
+// function validar() {
+//     const inputNombre = document.getElementById('input-nombre');
+//     const inputApellido = document.getElementById('input-apellido');
+//     const inputEmail = document.getElementById('mail_usuario')
+//     const inputDate = document.getElementById('date-usuario');
+//     if(!inputNombre.checkValidity()) {
+//       alert('El campo "nombre" debe ser llenado correctamente.');
+//     return false;
+//     }
+//     else if(!inputApellido.checkValidity()) {
+//         alert('Has olvidado poner tu apellido.');
+//     return false;
+//     }
+//     else if(inputEmail.value=='') {
+//       alert('El campo mail no es válido.');
    
+//     }
+//     else if(!inputDate.checkValidity()) {
+//         alert('Ingresa una fecha si lo deseas');
+//     return false;
+//     }
+//     onsubmitButton();
+// return true;
+// } 
+
+function validar(){
+document.getElementById("validationForm").addEventListener("onsubmitButton", function(event) {
+    var nombreInput = document.getElementById("input-name");
+    var apellidoInput = document.getElementById("input-apellido");
+
+    var nombreError = document.getElementById("nombreError");
+    var apellidoError = document.getElementById("apellidoError");
+
+    if (!nombreInput.checkValidity()) {
+        nombreError.style.display = "block";
+        event.preventDefault();
+    } else {
+        nombreError.style.display = "none";
     }
-    else if(!inputDate.checkValidity()) {
-        alert('Ingresa una fecha si lo deseas');
-    return false;
+
+    if (!apellidoInput.checkValidity()) {
+        apellidoError.style.display = "block";
+        event.preventDefault();
+    } else {
+        apellidoError.style.display = "none";
     }
-    onsubmitButton();
-return true;
-} 
+});
+}
+
+
 //Boton carga foto de perfil
 // const openModalBtn = document.getElementById('openModalBtn');
 

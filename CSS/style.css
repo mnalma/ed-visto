@@ -224,13 +224,20 @@ input{
     width: 28.75rem;
 }
 
+#mail_usuario{
+    width: 28.75rem;
+}
+
 .input-date{
     width: 25rem;
+    flex-direction: row;
+    align-items: center;
+    font-family: Inter;
 }
 
 
 #country{
-    width: 25rem;
+    width: 20rem;
     height: 2.5rem;
     border-radius: 10px;
     border: 2px solid #0B0033;
@@ -241,7 +248,7 @@ input{
 }
 
 #selector-grade{
-    width:20rem;
+    width:15rem;
     height: 2.5rem;
     border-radius: 10px;
     border: 2px solid #0B0033;
@@ -636,6 +643,21 @@ background-color:  #c8cacf;
     margin-top: 10px;
     display: none;
 }
+
+
+.error-message {
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color:#FF0060;
+    margin-left: 0px;
+    text-align: left;
+    margin-block-start: -15px;
+    display: none;
+}
+
 
 @media screen and (max-width: 820px){
     .body{

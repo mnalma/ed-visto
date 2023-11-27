@@ -66,11 +66,13 @@
 				<input class="input-name" type="text" id="input-name" name="input-nombre"
 					placeholder="Ej: Pablo Iñaqui " minlength="3" maxlength="35" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+"
 					required>
+				<p class="error-message" id="nombreError">El campo "Nombre" debe ser llenado correctamente.</p>	
 
 				<label class="tittle-input">Apellido/s (*)</label>
 				<input class="input-last-name" type="text" id="input-apellido" name="input-apellido"
 					placeholder="Ej: Márquez Garzón" required minlength="3" maxlength="35"
 					pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+">
+				<p class="error-message" id="apellidoError">Has olvidado poner tu apellido.</p>	
 
 				<label class="tittle-input">E-mail (*)</label>
 				<input type="mail" name="mail" id="mail_usuario" placeholder="Ej: ja.perez@gmail.com" minlength="1">
@@ -1076,7 +1078,7 @@
 					<div class="buttons-container">
 						<button type="reset" class="reset" onclick="onResetClick()"><img
 								src="../img/button-cancelar.png" alt="Botón de cancelar"></button>
-						<button class="submit" onclick="validar()"><img src="../img/button-guardar.png"
+						<button class="submit" type="submit" onclick="onsubmitButton()"><img src="../img/button-guardar.png"
 								alt="Botón de guardar"></button>
 					</div>
 				</div>
