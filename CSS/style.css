@@ -123,12 +123,37 @@ body {
 }
 
 
-.ambos-bloques{
+.both-blocks{
     width: 100%;
     display: flex;
     background-image: url(../img/frame-mac.svg);
     background-size: auto;
 }
+
+
+.foto-perfil{
+    display: inline;
+    text-align: center;
+    padding: 20px 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    width: 150px;
+    height: 150px;
+}
+
+
+.block-personal-information{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 27px;
+    margin-left:56px;
+    width: 50%;
+}
+
 .informacion-personal{
     width: 231px;
     height: 39px;
@@ -149,35 +174,12 @@ body {
     
 }
 
-
-.foto-perfil{
-    display: inline;
-    text-align: center;
-    padding: 20px 40px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    width: 150px;
-    height: 150px;
-}
-
-
-.bloque-info-personal{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 27px;
-    margin-left:56px;
-    width: 50%;
-}
-.formulario{
+.form{
     /* width: 70%; */
     margin-left: inherit
 }
 
-.titulo{
+.tittle{
     color: #0B0033;
     font-family: Urbanist;
     font-size: 24px;
@@ -189,7 +191,7 @@ body {
     margin-bottom: 0px;
 }
 
-.titulos-input{
+.tittle-input{
     color: #0B0033;
     font-family: Inter;
     font-size: 16px;
@@ -214,11 +216,11 @@ input{
     display: flex;
 }
 
-.input-nombre{
+.input-name{
     width: 28.75rem;
 }
 
-.input-apellido{
+.input-last-name{
     width: 28.75rem;
 }
 
@@ -227,7 +229,7 @@ input{
 }
 
 
-.selector-paises{
+#country{
     width: 25rem;
     height: 2.5rem;
     border-radius: 10px;
@@ -238,7 +240,7 @@ input{
 
 }
 
-#seleccion-grado{
+#selector-grade{
     width:20rem;
     height: 2.5rem;
     border-radius: 10px;
@@ -249,7 +251,7 @@ input{
     
 }
 
-.leyenda{
+.legend{
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
@@ -260,19 +262,17 @@ input{
     display: flex;
 }
    
-.bloque-foto-perfil{
-    /* margin-right: 112px; */
+.block-profile-photo{
     width: 50%;
-    /* display:flex; */
+    
 }
 
-.contenido-bloque-perfil{
+.content-profile-block{
     width: 75%;
     height: 530px;
     display: inline-flex;
     padding: 50px 40px;
     margin-top: 90px;
-    /* margin-right: 157px; */
     flex-direction: column;
     align-items: center;
     gap: 23px;
@@ -358,7 +358,7 @@ input{
 
 }
 
-.botones{
+.buttons{
     height: 20em;
     width: 100%;
     display:flex;
@@ -369,7 +369,7 @@ input{
     
 }
 
-.botones-contenedor{
+.buttons-container{
     margin-top: 50px;
     display: flex;
     justify-content: flex-end;
@@ -479,7 +479,7 @@ button{
 
 
 } */
-.contenedor{
+.container{
     width: 95%;
 }
 
@@ -502,8 +502,7 @@ button{
 .decoracion-img{
     display: flex;
     position: absolute;
-    /* width: 50%; */
-    /* align-items: flex-end; */
+
 }
 
 .mancha{
@@ -554,13 +553,13 @@ button{
     align-items: center;
 }
 
-.foto{
+.photo{
     position: absolute;
     top: 10px;
     left: 20px;
     color: #FFF;
 }
-.requerimientos-foto{
+.request-photo{
     color: #FFF;
 }
 .close {
@@ -589,7 +588,7 @@ button {
    
 }
 
-.dos-botones{
+.two-buttons{
     display:flex;
 }
 
