@@ -13,18 +13,6 @@ const showHideMenu = () => {
 profileMenuBtn.addEventListener('click', showHideMenu);
 
 
-
-     //Botones Guardar y Cancelar
-    //  tendria que nombrarla validar?
-// function onsubmitButton() {
-//     Swal.fire({
-//         title: "Guardar Formulario",
-//         text: "Guardado Correctamente!",
-//         icon: "success"
-//     });
-//     console.log("soy el onsubmit");
-// }
-
 function onsubmitButton() {
     Swal.fire({
         title: "Guardar Formulario",
@@ -43,35 +31,6 @@ function onResetClick() {
     
 }
 
-// onsubmit="return validar()";
-
-// //Validacion del formulario
-// function validar() {
-//     const inputNombre = document.getElementById('input-nombre');
-//     const inputApellido = document.getElementById('input-apellido');
-//     const inputEmail = document.getElementById('mail_usuario')
-//     const inputDate = document.getElementById('date-usuario');
-//     if(!inputNombre.checkValidity()) {
-//       alert('El campo "nombre" debe ser llenado correctamente.');
-//     return false;
-//     }
-//     else if(!inputApellido.checkValidity()) {
-//         alert('Has olvidado poner tu apellido.');
-//     return false;
-//     }
-//     else if(inputEmail.value=='') {
-//       alert('El campo mail no es válido.');
-   
-//     }
-//     else if(!inputDate.checkValidity()) {
-//         alert('Ingresa una fecha si lo deseas');
-//     return false;
-//     }
-//     onsubmitButton();
-// return true;
-// } 
-
-// function validar(){
 document.getElementById("validationForm").addEventListener("submit", function(event) {
     var nombreInput = document.getElementById("input-name");
     var apellidoInput = document.getElementById("input-apellido");
@@ -115,50 +74,42 @@ document.getElementById("input-apellido").addEventListener("input", function() {
 });
 
 
-//Boton carga foto de perfil
-// const openModalBtn = document.getElementById('openModalBtn');
+// Carga de foto
 
-// function printPantalla() {
-//     console.log("Le diste Click al botón");
-// }
+document.addEventListener('DOMContentLoaded', function () {
+    const openModalBtn = document.getElementById('openModalBtn');
+    const imageModal = document.getElementById('imageModal');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const fileInput = document.getElementById('fileInput');
+    const previewImage = document.getElementById('previewImage');
+    const customButton = document.getElementById('custom-button');
+  
+    openModalBtn.addEventListener('click', function () {
+        imageModal.style.display = 'block';
+    });
 
-// openModalBtn.addEventListener('click', printPantalla);
+    customButton.addEventListener('click', () => {
+        fileInput.click();
+      });
+    
 
-//boton de carga de foto
-//   const fileInput = document.getElementById('fileInput');
-//   const customButton = document.getElementById('custom-button');
+    fileInput.addEventListener('change', function () {
+        const file = fileInput.files[0];
 
-//   customButton.addEventListener('click', () => {
-//     fileInput.click();
-//   });
+        if (file) {
+            const reader = new FileReader();
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const openModalBtn = document.getElementById('openModalBtn');
-//     const imageModal = document.getElementById('imageModal');
-//     const closeModalBtn = document.getElementById('closeModalBtn');
-//     const fileInput = document.getElementById('fileInput');
-//     const previewImage = document.getElementById('previewImage');
+            reader.addEventListener('load', function () {
+                previewImage.src = reader.result;
+                previewImage.style.display = 'block';
+            });
 
-//     openModalBtn.addEventListener('click', function () {
-//         imageModal.style.display = 'block';
-//     });
+            reader.readAsDataURL(file);
+        }
+    });
 
-//     closeModalBtn.addEventListener('click', function () {
-//         imageModal.style.display = 'none';
-//     });
-
-//     fileInput.addEventListener('change', function () {
-//         const file = fileInput.files[0];
-
-//         if (file) {
-//             const reader = new FileReader();
-
-//             reader.addEventListener('load', function () {
-//                 previewImage.src = reader.result;
-//                 previewImage.style.display = 'block';
-//             });
-
-//             reader.readAsDataURL(file);
-//         }
-//     });
-// });
+    closeModalBtn.addEventListener('click', function () {
+        console.log('Button clicked');
+        imageModal.style.display = 'none';
+    });
+});
