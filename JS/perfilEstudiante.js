@@ -31,7 +31,7 @@ function onResetClick() {
     
 }
 
-document.getElementById("validationForm").addEventListener("submit", function(event) {
+// document.getElementById("validationForm").addEventListener("submit", function(event) {
     var nombreInput = document.getElementById("input-name");
     var apellidoInput = document.getElementById("input-apellido");
     var dateInput = document.getElementById("date-usuario");
@@ -40,35 +40,78 @@ document.getElementById("validationForm").addEventListener("submit", function(ev
     var apellidoError = document.getElementById("apellidoError");
     var dateError = document.getElementById("dateError");
 
-    if (!nombreInput.checkValidity()) {
-        nombreError.style.display = "block";
+    const submit = document.getElementById("submit");
+
+    submit.addEventListener('click', (event)=>{
         event.preventDefault();
-    } else {
-        nombreError.style.display = "none";
+        validateEmpty(nombreInput.value, nombreInput, nombreError);
+    });
+
+   function validateEmpty(valueInput, divInput, divError){
+    if(valueInput.length == 0){
+        showError(divInput, divError);
+    }else{
+        hideError(divInput, divError);
     }
+   }
 
-    if (!apellidoInput.checkValidity()) {
-        apellidoError.style.display = "block";
-        event.preventDefault();
-    } else {
-        apellidoError.style.display = "none";
-    }
-    if (!dateInput.checkValidity()) {
-        dateError.style.display = "block";
-        event.preventDefault();
-    } else {
-        dateError.style.display = "none";
-    }
-    if (nombreInput.checkValidity() && apellidoInput.checkValidity() && dateInput.checkValidity()) {
-        onsubmitButton();
-}
+   function showError(divInput, divError){
+    divInput.style.border ='1px solid red';
+    divError.innerHTML = 'Olvidaste completarlo';
 
-});
+   }
+   function hideError(){
+    divInput.style.border ='1px solid red';
+    divError.innerHTML = ""
+   }
 
-document.getElementById("input-name").addEventListener("input", function() {
-    document.getElementById("nombreError").style.display = "none";
-});
+//     if (!nombreInput.checkValidity()) {
+//         nombreError.style.display = "block";
+//         event.preventDefault();
+//     } else {
+//         nombreError.style.display = "none";
+//     }
 
-document.getElementById("input-apellido").addEventListener("input", function() {
-    document.getElementById("apellidoError").style.display = "none";
-});
+//     if (!apellidoInput.checkValidity()) {
+//         apellidoError.style.display = "block";
+//         event.preventDefault();
+//     } else {
+//         apellidoError.style.display = "none";
+//     }
+//     if (!dateInput.checkValidity()) {
+//         dateError.style.display = "block";
+//         event.preventDefault();
+//     } else {
+//         dateError.style.display = "none";
+//     }
+//     if (nombreInput.checkValidity() && apellidoInput.checkValidity() && dateInput.checkValidity()) {
+//         onsubmitButton();
+// }
+
+// });
+
+// document.getElementById("input-name").addEventListener("input", function() {
+//     document.getElementById("nombreError").style.display = "none";
+// });
+
+// document.getElementById("input-apellido").addEventListener("input", function() {
+//     document.getElementById("apellidoError").style.display = "none";
+// });
+
+// function submitForm(){
+// var country = document.getElementById("country");
+// var dateInput = document.getElementById("date-usuario");
+// var dateGrade = document.getElementById("selector-grade");
+
+// const tarjetaContenido = `
+//         <p><strong>Nombre:</strong> ${nombreInput}</p>
+//         <p><strong>Apellido:</strong> ${apellidoInput}</p>
+//         <h2>Estudiante</h2>
+//         <p><strong>Fecha de Nacimiento:</strong> ${dateInput}</p>
+//         <p><strong>Grado:</strong> ${dateGrade}</p>
+//         <p><strong>País:</strong> ${country}</p>
+//     `;
+
+//     // Mostrar contenido en la tarjeta
+//     document.getElementById('tarjeta').innerHTML = tarjetaContenido;
+// 

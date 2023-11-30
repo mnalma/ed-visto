@@ -63,17 +63,23 @@
 			<form class="form" action="" id="validationForm" name="validationForm" >
 				<!-- onsubmit="return validar()" -->
 
-				<label class="tittle-input">Nombre/s (*)</label>
-				<input class="input-name" type="text" id="input-name" name="input-nombre"
+				<label for="input-name"class="tittle-input">Nombre/s (*)</label>
+				<!-- <input class="input-name" type="text" id="input-name" name="input-nombre"
 					placeholder="Ej: Pablo Iñaqui " minlength="3" maxlength="35" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+"
-					required>
-				<p class="error-message" id="nombreError">El campo "Nombre" debe ser llenado correctamente.</p>	
+					required> -->
+					<input class="input-name" type="text" id="input-name" name="input-nombre"
+					placeholder="Ej: Pablo Iñaqui ">
+				<!-- <p class="error-message" id="nombreError">El campo "Nombre" debe ser llenado correctamente.</p>	 -->
+					<div id="nombreError">
+						<!-- "El campo debe ser completado" -->
+					</div>
 
-				<label class="tittle-input">Apellido/s (*)</label>
+				<label for="input-last-name"class="tittle-input">Apellido/s (*)</label>
 				<input class="input-last-name" type="text" id="input-apellido" name="input-apellido"
 					placeholder="Ej: Márquez Garzón" required minlength="3" maxlength="35"
 					pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+">
 				<p class="error-message" id="apellidoError">Has olvidado poner tu apellido.</p>	
+				
 
 				<label class="tittle-input">E-mail (*)</label>
 				<input type="mail" name="mail" id="mail_usuario" placeholder="Ej: ja.perez@gmail.com" minlength="1">
@@ -1080,7 +1086,7 @@
 					<div class="buttons-container">
 						<button type="reset" class="reset" onclick="onResetClick()"><img
 								src="../img/button-cancelar.png" alt="Botón de cancelar"></button>
-						<button class="submit" type="submit">
+						<button class="submit" type="submit" id="submit"> 
 							<img src="../img/button-guardar.png"
 								alt="Botón de guardar"></button>
 					</div>
@@ -1098,11 +1104,15 @@
 									<img src="../img/camara.svg" alt="Imagen camara de fotos" class="camara-foto2">
 								</div> -->
 								
-									<p class="datos-estudiante">NOMBRE Y APELLIDO<br><br>
+									<!-- <p class="datos-estudiante">NOMBRE Y APELLIDO<br><br>
 										ESTUDIANTE<br>
 										EDAD<br>
 										PAÍS DE RESIDENCIA<br>
-										GRADO<br></p>
+										GRADO<br></p> -->
+
+										<div class="tarjeta" id="tarjeta">
+											
+										</div>
 							</div>
 						</div>
 					</div>

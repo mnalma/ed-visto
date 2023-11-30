@@ -448,6 +448,17 @@ button{
 .container {
     position: relative;
 }
+
+.tarjeta{
+    align-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
  
 .error-message {
     font-family: Inter;
@@ -459,9 +470,8 @@ button{
     margin-left: 0px;
     text-align: left;
     margin-block-start: -15px;
-    /* display: none; */
+    display: none;
 }
-
 
 @media (max-width: 1090px){
     
