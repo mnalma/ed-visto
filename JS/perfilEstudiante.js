@@ -13,13 +13,13 @@ const showHideMenu = () => {
 profileMenuBtn.addEventListener('click', showHideMenu);
 
 
-function onsubmitButton() {
+function showSuccess() {
     Swal.fire({
         title: "Guardar Formulario",
         text: "Guardado Correctamente!",
         icon: "success"
     });
-    console.log("soy el onsubmit");
+   
 }
 
 function onResetClick() {
@@ -31,87 +31,44 @@ function onResetClick() {
     
 }
 
-// document.getElementById("validationForm").addEventListener("submit", function(event) {
-    var nombreInput = document.getElementById("input-name");
-    var apellidoInput = document.getElementById("input-apellido");
-    var dateInput = document.getElementById("date-usuario");
+// document.getElementById("validationForm").addEventListener("submit", function(event)) {
+    var nombre = document.getElementById("input-name");
+    var apellido = document.getElementById("input-apellido");
+    var nacimiento = document.getElementById("date-usuario");
 
     var nombreError = document.getElementById("nombreError");
     var apellidoError = document.getElementById("apellidoError");
-    var dateError = document.getElementById("dateError");
+    var nacimientoError = document.getElementById("nacimientoError");
 
-    const submit = document.getElementById("submit");
+    const form = document.getElementById("validationForm");
 
-    submit.addEventListener('click', (event)=>{
+    form.addEventListener('submit', (event)=>{
         event.preventDefault();
-        validateEmpty(nombreInput.value, nombreInput, nombreError);
+        if(!validateEmpty(nombre.value, nombre, nombreError, 'nombre')) return false;
+        if(!validateEmpty(apellido.value, apellido, apellidoError, 'apellido')) return false;
+        if(!validateEmpty(nacimiento.value, nacimiento, nacimientoError, 'fecha de nacimiento'))return false;
+
+        showSuccess();
+        return true;
     });
 
-   function validateEmpty(valueInput, divInput, divError){
+
+// validación general de que el campo no este vacio   
+   function validateEmpty(valueInput, divInput, divError, nombreInput){
     if(valueInput.length == 0){
-        showError(divInput, divError);
+        showError(divInput, divError, nombreInput);
+        return false;
     }else{
-        hideError(divInput, divError);
+        hideError(divError);
+        return true;
     }
    }
 
-   function showError(divInput, divError){
-    divInput.style.border ='1px solid red';
-    divError.innerHTML = 'Olvidaste completarlo';
-
+   function showError(divInput, divError, nombreInput){
+    divError.innerHTML = `<p class= "error">El campo ${nombreInput} debe ser completado </p>`
    }
-   function hideError(){
-    divInput.style.border ='1px solid red';
+
+   function hideError(divError){
     divError.innerHTML = ""
    }
 
-//     if (!nombreInput.checkValidity()) {
-//         nombreError.style.display = "block";
-//         event.preventDefault();
-//     } else {
-//         nombreError.style.display = "none";
-//     }
-
-//     if (!apellidoInput.checkValidity()) {
-//         apellidoError.style.display = "block";
-//         event.preventDefault();
-//     } else {
-//         apellidoError.style.display = "none";
-//     }
-//     if (!dateInput.checkValidity()) {
-//         dateError.style.display = "block";
-//         event.preventDefault();
-//     } else {
-//         dateError.style.display = "none";
-//     }
-//     if (nombreInput.checkValidity() && apellidoInput.checkValidity() && dateInput.checkValidity()) {
-//         onsubmitButton();
-// }
-
-// });
-
-// document.getElementById("input-name").addEventListener("input", function() {
-//     document.getElementById("nombreError").style.display = "none";
-// });
-
-// document.getElementById("input-apellido").addEventListener("input", function() {
-//     document.getElementById("apellidoError").style.display = "none";
-// });
-
-// function submitForm(){
-// var country = document.getElementById("country");
-// var dateInput = document.getElementById("date-usuario");
-// var dateGrade = document.getElementById("selector-grade");
-
-// const tarjetaContenido = `
-//         <p><strong>Nombre:</strong> ${nombreInput}</p>
-//         <p><strong>Apellido:</strong> ${apellidoInput}</p>
-//         <h2>Estudiante</h2>
-//         <p><strong>Fecha de Nacimiento:</strong> ${dateInput}</p>
-//         <p><strong>Grado:</strong> ${dateGrade}</p>
-//         <p><strong>País:</strong> ${country}</p>
-//     `;
-
-//     // Mostrar contenido en la tarjeta
-//     document.getElementById('tarjeta').innerHTML = tarjetaContenido;
-// 

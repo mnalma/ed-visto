@@ -64,29 +64,28 @@
 				<!-- onsubmit="return validar()" -->
 
 				<label for="input-name"class="tittle-input">Nombre/s (*)</label>
-				<!-- <input class="input-name" type="text" id="input-name" name="input-nombre"
-					placeholder="Ej: Pablo Iñaqui " minlength="3" maxlength="35" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+"
-					required> -->
 					<input class="input-name" type="text" id="input-name" name="input-nombre"
 					placeholder="Ej: Pablo Iñaqui ">
-				<!-- <p class="error-message" id="nombreError">El campo "Nombre" debe ser llenado correctamente.</p>	 -->
+		
 					<div id="nombreError">
 						<!-- "El campo debe ser completado" -->
 					</div>
 
 				<label for="input-last-name"class="tittle-input">Apellido/s (*)</label>
 				<input class="input-last-name" type="text" id="input-apellido" name="input-apellido"
-					placeholder="Ej: Márquez Garzón" required minlength="3" maxlength="35"
-					pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+">
-				<p class="error-message" id="apellidoError">Has olvidado poner tu apellido.</p>	
+					placeholder="Ej: Márquez Garzón">
+					<div id="apellidoError">
+					</div>
 				
 
 				<label class="tittle-input">E-mail (*)</label>
-				<input type="mail" name="mail" id="mail_usuario" placeholder="Ej: ja.perez@gmail.com" minlength="1">
+				<input type="mail" name="mail" id="mail_usuario">
+
 
 				<label class="tittle-input">Fecha de Nacimiento (*)</label>
-				<input class="input-date" type="date" id="date-usuario" min="2010-01-01" max="2017-01-01" required>
-				<p class="error-message"id="dateError">Debes seleccionar una fecha.</p>	
+				<input class="input-date" type="date" id="date-usuario">
+				<div id="nacimientoError">
+				</div>
 
 
 				<label class="tittle-input">País de residencia</label>
@@ -1086,7 +1085,8 @@
 					<div class="buttons-container">
 						<button type="reset" class="reset" onclick="onResetClick()"><img
 								src="../img/button-cancelar.png" alt="Botón de cancelar"></button>
-						<button class="submit" type="submit" id="submit"> 
+						<!-- <button class="submit" type="submit" id="submit" onclick="onSubmitClick()">  -->
+							<button class="submit" type="submit" id="submit" > 
 							<img src="../img/button-guardar.png"
 								alt="Botón de guardar"></button>
 					</div>
