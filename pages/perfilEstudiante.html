@@ -45,9 +45,7 @@
 				<li>
 					<a class="menu-miperfil" id="unoPerfil" href="">Perfil</a>
 				</li>
-				<!-- <li>
-					<a class="menu-miperfil" id="dosConfiguracion" href="">Configuración</a>
-				</li> -->
+				
 				<li>
 					<a class="menu-miperfil" id="tresSalir" href="">Salir</a>
 				</li>
@@ -61,32 +59,24 @@
 		<div class="block-personal-information">
 			<h1 class="tittle">INFORMACIÓN PERSONAL</h1>
 			<form class="form" action="" id="validationForm" name="validationForm" >
-				<!-- onsubmit="return validar()" -->
 
 				<label for="input-name"class="tittle-input">Nombre/s (*)</label>
-					<input class="input-name" type="text" id="input-name" name="input-nombre"
-					placeholder="Ej: Pablo Iñaqui ">
-		
-					<div id="nombreError">
-						<!-- "El campo debe ser completado" -->
-					</div>
+				<input class="input-name" type="text" id="input-name" name="input-nombre"	
+				placeholder="Ej: Pablo Iñaqui ">
+				<div id="nombreError"></div>
 
 				<label for="input-last-name"class="tittle-input">Apellido/s (*)</label>
 				<input class="input-last-name" type="text" id="input-apellido" name="input-apellido"
-					placeholder="Ej: Márquez Garzón">
-					<div id="apellidoError">
-					</div>
+				placeholder="Ej: Márquez Garzón">
+				<div id="apellidoError"></div>
 				
-
 				<label class="tittle-input">E-mail (*)</label>
 				<input type="mail" name="mail" id="mail_usuario">
-
-
+				<div id="mailError"></div>
+				
 				<label class="tittle-input">Fecha de Nacimiento (*)</label>
-				<input class="input-date" type="date" id="date-usuario">
-				<div id="nacimientoError">
-				</div>
-
+				<input class="input-date" type="date" id="date-usuario" min="2010-01-01" max="2016-12-01">
+				<div id="nacimientoError"></div>
 
 				<label class="tittle-input">País de residencia</label>
 				<label for="seleccion_pais"></label>
@@ -1085,9 +1075,8 @@
 					<div class="buttons-container">
 						<button type="reset" class="reset" onclick="onResetClick()"><img
 								src="../img/button-cancelar.png" alt="Botón de cancelar"></button>
-						<!-- <button class="submit" type="submit" id="submit" onclick="onSubmitClick()">  -->
-							<button class="submit" type="submit" id="submit" > 
-							<img src="../img/button-guardar.png"
+						
+						<button class="submit" type="submit" id="submit"> <img src="../img/button-guardar.png"
 								alt="Botón de guardar"></button>
 					</div>
 				</div>
@@ -1097,35 +1086,19 @@
 		<div class="block-profile-photo">
 			<div class="container">
 				<div class="content-profile-block">
-								<img src="../img/elipse.svg" alt="Foto de Perfil" class="circulo-perfil">
-								<img src="../img/avatar-card.png" alt="Avatar de perfil" class="avatar-card">
-								<!-- <div class="icono-camara2">
-									<img src="../img/recuadro-foto.svg" alt="Cuadrante de foto" class="recuadro-foto2">
-									<img src="../img/camara.svg" alt="Imagen camara de fotos" class="camara-foto2">
-								</div> -->
-								
-									<!-- <p class="datos-estudiante">NOMBRE Y APELLIDO<br><br>
-										ESTUDIANTE<br>
-										EDAD<br>
-										PAÍS DE RESIDENCIA<br>
-										GRADO<br></p> -->
-
-										<div class="tarjeta" id="tarjeta">
-											
-										</div>
-							</div>
-						</div>
-					</div>
-
+					<img src="../img/elipse.svg" alt="Foto de Perfil" class="circulo-perfil">
+					<img src="../img/avatar-card.png" alt="Avatar de perfil" class="avatar-card">
 				</div>
+			</div>
+		</div>
+
+	</div>
 			
 	<div class="decoracion-img">
 		<img src="../img/decoracion.png" alt="deco" class="mancha">
 		<img src="../img/decoracion-libros.png" alt="deco libros" class="libros">
 	</div>
 
-
-	
 	<script src="/js/sweetAlert/sweetalert2.js"></script>
 	<script src="js/sweetAlertCode.js"></script>
 	<script src="js/alerts/alertSave.js"></script>
