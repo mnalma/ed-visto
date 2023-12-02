@@ -24,7 +24,7 @@
 				<div class="user-sesion">
 					<div class="profile1">
 						<div class="profile-name">
-							<p id="modulo">¡Hola, Juan!</p>
+							<p id="modulo"></p>
 						</div>
 						<div class="profile-image perfil-circular">
 							<img src="../img/avatar.svg" alt="Icono del perfil" aria-label="Icono del perfil"
@@ -1077,7 +1077,7 @@
 								src="../img/button-cancelar.png" alt="Botón de cancelar"></button>
 						
 						<button class="submit" type="submit" id="submit"> <img src="../img/button-guardar.png"
-								alt="Botón de guardar"></button>
+								alt="Botón de guardar" onclick="actualizarMensajeBienvenida()"></button>
 					</div>
 				</div>
 			</form>
@@ -1099,11 +1099,28 @@
 		<img src="../img/decoracion-libros.png" alt="deco libros" class="libros">
 	</div>
 
+	<script>
+		
+		function obtenerPrimerNombre() {
+		  var nombre = document.getElementById("input-name").value;
+		  var primerNombre = nombre.split(' ')[0];
+		  return primerNombre;
+		}
+	  
+		function actualizarMensajeBienvenida() {
+		  var moduloElemento = document.getElementById("modulo");
+		  var primerNombre = obtenerPrimerNombre();
+	  
+		  moduloElemento.textContent = "¡Hola, " + primerNombre + "!";
+		}
+	  </script>
+	  
 	<script src="/js/sweetAlert/sweetalert2.js"></script>
 	<script src="js/sweetAlertCode.js"></script>
 	<script src="js/alerts/alertSave.js"></script>
 	<script src="js/alerts/alertCancel.js"></script>
 	<script src="/js/perfilEstudiante.js"></script>
+
 
 </body>
 
