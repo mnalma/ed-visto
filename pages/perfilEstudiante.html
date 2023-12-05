@@ -1119,8 +1119,25 @@
 	<script src="js/sweetAlertCode.js"></script>
 	<script src="js/alerts/alertSave.js"></script>
 	<script src="js/alerts/alertCancel.js"></script>
+	<script src="/JS/axios/axios.js"></script>
 	<script src="/js/perfilEstudiante.js"></script>
+	<script>
+		let id='656b6774d89ca8ee41cc9c1a';
+		axios.get('http://localhost:3000/api/users/'+id)
+    
+  .then(function (response) {
+    console.log(response.data.data);
+	console.log("-----------------------")
+	console.log(response.data.data.name)
+	console.log("-----------------------")
+	let data= response.data.data;
+	console.log("nombre="+data.name)
 
+  })
+  .catch(function (error) {
+    console.log(error);
+  })
+	</script>
 
 </body>
 

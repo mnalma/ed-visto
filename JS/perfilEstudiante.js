@@ -52,6 +52,8 @@ form.addEventListener('submit', (event) => {
     if (!validateEmpty(nacimiento.value, nacimiento, nacimientoError, 'fecha de nacimiento')) return false;
     if (!validateEmpty(mail.value, mail, mailError, 'e-mail')) return false;
 
+
+    
     showSuccess();
     return true;
 });
