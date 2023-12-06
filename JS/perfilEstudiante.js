@@ -36,11 +36,13 @@ var nombre = document.getElementById("input-name");
 var apellido = document.getElementById("input-apellido");
 var nacimiento = document.getElementById("date-usuario");
 var mail = document.getElementById("mail_usuario");
+var grado = document.getElementById("selector-grade");
 
 var nombreError = document.getElementById("nombreError");
 var apellidoError = document.getElementById("apellidoError");
 var nacimientoError = document.getElementById("nacimientoError");
 var mailError = document.getElementById("mailError");
+var gradoError = document.getElementById("gradoError");
 
 const form = document.getElementById("validationForm");
 var lettersRegex = /^[A-Za-záéíóúüñÁÉÍÓÚÜÑ\s]+$/;
@@ -49,11 +51,34 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!validatePattern(nombre.value, nombre, nombreError, 'nombre', lettersRegex)) return false;
     if (!validatePattern(apellido.value, apellido, apellidoError, 'apellido', lettersRegex)) return false;
-    if (!validateEmpty(nacimiento.value, nacimiento, nacimientoError, 'fecha de nacimiento')) return false;
     if (!validateEmpty(mail.value, mail, mailError, 'e-mail')) return false;
+    if (!validateEmpty(nacimiento.value, nacimiento, nacimientoError, 'fecha de nacimiento')) return false;
+    if (!validateSelect(grado.value, grado, gradoError, 'grado')) return false;
+//TODO: Aca iria la funcion patch para traerme del servidor los datos
 
+const id = "656b6774d89ca8ee41cc9c1a";
+let url = 'http://localhost:3000/api/profiles/${id}';
+const actualizarDatos = {
+    nombre: 'nuevoNombre',
+    apellido: 'nuevoApellido',
+    nacimiento: 'nuevoNacimiento',
+    email: 'nuevoemail',
+    grado: 'nuevogrado',
+    pais: 'nuevopais',
+};
 
-    
+axios.patch(url, actualizarDatos)
+    .then(response => {
+        if (response.status >= 200 && response.status < 300) {
+            console.log('Petición PATCH exitosa');
+        } else {
+            console.error(`Error en la petición PATCH. Código de estado: ${response.status}`);
+        }
+    })
+    .catch(error => {
+        console.error(`Error en la conexión: ${error.message}`);
+    });
+
     showSuccess();
     return true;
 });
@@ -76,6 +101,16 @@ function validateEmpty(valueInput, divInput, divError, nombreInput) {
         showError(divInput, divError, `El ${nombreInput} debe ser completado`);
         return false;
     } else {
+        hideError(divError);
+        return true;
+    }
+}
+
+function validateSelect(valueInput, divInput, divError, nombreInput){
+    if (valueInput ===""){
+        showError(divInput,divError,'Seleccione un grado');
+        return false;
+    }else {
         hideError(divError);
         return true;
     }

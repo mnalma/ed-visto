@@ -72,7 +72,7 @@ nav.header {
     justify-content: space-between;
     align-items: center;
     max-width: 262px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .profile-image {
@@ -262,9 +262,11 @@ input{
     border-radius: 10px;
     border: 2px solid #0B0033;
     background: rgba(255, 255, 255, 0.80);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display:flex;
 }
+
+
 
 .legend{
     font-family: Inter;
@@ -400,7 +402,7 @@ input{
 }
 
 /*Estilo mensajes de error en las validaciones del formulario*/
-#nombreError,#apellidoError,#nacimientoError,#mailError{
+#nombreError,#apellidoError,#nacimientoError,#mailError,#gradoError{
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
