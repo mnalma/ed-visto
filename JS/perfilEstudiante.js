@@ -58,17 +58,23 @@ form.addEventListener('submit', (event) => {
 
 const id = "656b6774d89ca8ee41cc9c1a";
 let url = `http://localhost:3000/api/profiles/${id}`;
-const actualizarDatos = {
-    nombre: 'nuevoNombre',
-    apellido: 'nuevoApellido',
-    nacimiento: 'nuevoNacimiento',
-    // email: 'nuevoemail',
-    pais: 'nuevopais',
-    grado: 'nuevogrado',
-};
+// const actualizarDatos = {
+//     nombre: 'nuevoNombre',
+//     apellido: 'nuevoApellido',
+//     nacimiento: 'nuevoNacimiento',
+//     // email: 'nuevoemail',
+//     pais: 'nuevopais',
+//     grado: 'nuevogrado',
+// };
 
 // const axios = require("axios");
-axios.patch(url, actualizarDatos)
+axios.patch(url, {
+    "name": "Ana María",
+    "lastName": "Moreno",
+    "birthdayDate": "26-05-2005",
+    "course": "QuintoA",
+    "country": "Colombia"
+  })
     .then(response => {
         if (response.status >= 200 && response.status < 300) {
             console.log('Petición PATCH exitosa');
