@@ -57,7 +57,7 @@ form.addEventListener('submit', (event) => {
 //TODO: Aca iria la funcion patch para traerme del servidor los datos
 
 const id = "656b6774d89ca8ee41cc9c1a";
-let url = 'http://localhost:3000/api/profiles/${id}';
+let url = `http://localhost:3000/api/profiles/${id}`;
 const actualizarDatos = {
     nombre: 'nuevoNombre',
     apellido: 'nuevoApellido',
@@ -75,13 +75,14 @@ axios.patch(url, actualizarDatos)
         } else {
             console.error(`Error en la petición PATCH. Código de estado: ${response.status}`);
         }
+        
+        showSuccess();
     })
     .catch(error => {
         console.error(`Error en la conexión: ${error.message}`);
+        
     });
 
-    showSuccess();
-    return true;
 });
 
 // Validación de que el campo no esté vacío y cumpla con el patrón
@@ -124,4 +125,3 @@ function showError(divInput, divError, message) {
 function hideError(divError) {
     divError.innerHTML = "";
 }
-
