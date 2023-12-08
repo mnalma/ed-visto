@@ -10,7 +10,7 @@
 		rel="stylesheet">
 	<title>EdVisto</title>
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="css/sweetAlert/sweetalert2.css">
+	<link rel="stylesheet" href="/CSS/sweetAlert/sweetalert2.css">
 
 </head>
 
@@ -65,7 +65,7 @@
 				placeholder="Ej: Pablo Iñaqui ">
 				<div id="nombreError"></div>
 
-				<label for="input-last-name"class="tittle-input">Apellido/s (*)</label>
+				<label for="input-apellido"class="tittle-input">Apellido/s (*)</label>
 				<input class="input-last-name" type="text" id="input-apellido" name="input-apellido"
 				placeholder="Ej: Márquez Garzón">
 				<div id="apellidoError"></div>
@@ -79,7 +79,7 @@
 				<div id="nacimientoError"></div>
 
 				<label class="tittle-input">País de residencia</label>
-				<label for="seleccion_pais"></label>
+				<label for="selector-paises"></label>
 				<select class="selector-paises" name="country" id="country">
 					<option value="">Seleccione un país</option>
 
@@ -1056,17 +1056,17 @@
 				</select>
 
 				<label class="tittle-input">Nivel educativo (grado/año)</label>
-				<label for="seleccion-grado"></label>
+				<label for="selector-grade"></label>
 				<select id="selector-grade">
 					<option value="">Seleccione un grado o año</option>
-					<option value="1">1°</option>
-					<option value="1">2°</option>
-					<option value="1">3°</option>
-					<option value="1">4°</option>
-					<option value="1">5°</option>
-					<option value="1">6°</option>
-					<option value="1">7°</option>
-					<option value="1">8°</option>
+					<option value="1">SegundoA</option>
+					<option value="1">SegundoB</option>
+					<option value="1">TerceroA</option>
+					<option value="1">TerceroB</option>
+					<option value="1">CuartoA</option>
+					<option value="1">CuartoB</option>
+					<option value="1">QuintoA</option>
+					<option value="1">QuintoB</option>
 				</select>
 				<div id="gradoError"></div>
 
@@ -1117,9 +1117,9 @@
 	  </script>
 	  
 	<script src="/js/sweetAlert/sweetalert2.js"></script>
-	<script src="js/sweetAlertCode.js"></script>
-	<script src="js/alerts/alertSave.js"></script>
-	<script src="js/alerts/alertCancel.js"></script>
+	<script src="/JS/sweetAlertCode.js"></script>
+	<script src="/JS/alerts/alertSave.js"></script>
+	<script src="/JS/alerts/alertCancel.js"></script>
 	<script src="/JS/axios/axios.js"></script>
 	<script src="/js/perfilEstudiante.js"></script>
 	<script>
@@ -1147,14 +1147,3 @@
 </html>
 
 
-GET http://mengueche.com/users
-POST http://mengueche.com/users
-
-
-const data = {
-	name: "Ana María",
-	lastName: "Moreno",
-	birthdayDate: "26-05-2005",
-	course: "QuintoA",
-	country: "Colombia"
-  }

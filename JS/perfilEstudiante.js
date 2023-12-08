@@ -62,11 +62,12 @@ const actualizarDatos = {
     nombre: 'nuevoNombre',
     apellido: 'nuevoApellido',
     nacimiento: 'nuevoNacimiento',
-    email: 'nuevoemail',
-    grado: 'nuevogrado',
+    // email: 'nuevoemail',
     pais: 'nuevopais',
+    grado: 'nuevogrado',
 };
 
+// const axios = require("axios");
 axios.patch(url, actualizarDatos)
     .then(response => {
         if (response.status >= 200 && response.status < 300) {
