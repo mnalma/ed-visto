@@ -58,16 +58,7 @@ form.addEventListener('submit', (event) => {
 
 const id = "656b6774d89ca8ee41cc9c1a";
 let url = `http://localhost:3000/api/profiles/${id}`;
-// const actualizarDatos = {
-//     nombre: 'nuevoNombre',
-//     apellido: 'nuevoApellido',
-//     nacimiento: 'nuevoNacimiento',
-//     // email: 'nuevoemail',
-//     pais: 'nuevopais',
-//     grado: 'nuevogrado',
-// };
 
-// const axios = require("axios");
 axios.patch(url, {
     "name": "Ana María",
     "lastName": "Moreno",
